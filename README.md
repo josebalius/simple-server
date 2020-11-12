@@ -1,3 +1,3 @@
 # simple-server
 
-This is a very simple server. Hello World with GPG x6
+This is a very simple server. Hello World with GPG x7
