@@ -1,3 +1,3 @@
 # simple-server
 
-This is a very simple server. Committing with GPG enabled for all repositories.
+This is a very simple server. Commit with GPG enabled for a selected repository.
