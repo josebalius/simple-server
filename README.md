@@ -1,3 +1,3 @@
 # simple-server
 
-This is a very simple server. Try to commit with GPG disabled on GitHub
+This is a very simple server. Commit with GPG enabled for a single repo.
