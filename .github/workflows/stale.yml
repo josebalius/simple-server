@@ -1,0 +1,26 @@
+name: Mark stale issues and pull requests
+
+on:
+  schedule:
+  - cron: "30 1 * * *"
+
+jobs:
+  stale:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/stale@v3
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        stale-issue-message: "👋 This issue has been marked as stale because it has been open with no activity. You can: comment on the issue or remove the stale label to hold stale off for a while, add the `Keep` label to hold stale off permanently, or do nothing. If you do nothing this issue will be closed eventually by the stale bot. Please see issue `#146824` for more."
+        stale-issue-label: "Stale"
+        exempt-issue-labels: "Keep"
+        stale-pr-message: "👋 This pull request has been marked as stale because it has been open with no activity. You can: comment on the issue or remove the stale label to hold stale off for a while, add the `Keep` label to hold stale off permanently, or do nothing. If you do nothing this pull request will be closed eventually by the stale bot. Please see issue `#146824` for more."
+        stale-pr-label: "Stale"
+        exempt-pr-labels: "Keep"
+        # Let's start by setting this pretty high, we can bring this down once we get the number of PRs and Issues down.
+        days-before-stale: 364
+        days-before-close: 1
+        ascending: true
+        operations-per-run: 500
